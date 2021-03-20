@@ -1,17 +1,40 @@
 import styled from "styled-components";
-import { Table, TableCell, TextField, Select } from "@material-ui/core";
+import {
+  Table,
+  TableHead,
+  TableCell,
+  TextField,
+  Select,
+} from "@material-ui/core";
 import { device } from "./index";
 
 export const StyledTable = styled(Table)`
   margin: 1.5em 0 !important;
+`;
+export const StyledTableHead = styled(TableHead)`
+  font-weight: 600 !important;
+
+  th {
+    font-weight: 600 !important;
+  }
 `;
 
 export const NoTableCell = styled(TableCell)`
   width: 1em;
   text-align: right;
 
-  padding: 0 !important;
-  padding-right: 4px !important;
+  padding: 0 4px !important;
+  padding-left: 16px !important;
+`;
+export const BookTitleCell = styled(TableCell)`
+  display: flex !important;
+  align-items: center;
+
+  img {
+    height: 80px;
+    width: 53px;
+    margin-right: 1em;
+  }
 `;
 
 export const StyledFilters = styled.div`
@@ -40,7 +63,7 @@ export const FiltersTextField = styled(TextField)`
 export const FiltersSelect = styled(Select)`
   height: 39px;
   margin-right: 5px;
-  width: 70%;
+  width: 150%;
   margin-bottom: 0.8em;
 
   &:not(:last-child) {

@@ -1,5 +1,5 @@
 import React, { FC } from "react";
-import { Box, Divider } from "@material-ui/core";
+import { Divider } from "@material-ui/core";
 import {
   StyledFilters,
   FiltersTextField,
@@ -59,7 +59,7 @@ const Filters: FC<FiltersProps> = ({ filters, onFiltersChange }) => {
             value={filters.pages || ""}
             name="pages"
             variant="outlined"
-            inputProps={{ style: { fontSize: 14 } }}
+            inputProps={{ style: { fontSize: 14, textAlign: "right" } }}
             InputLabelProps={{ style: { fontSize: 14 } }}
             onChange={onFiltersChange}
           />
@@ -84,7 +84,7 @@ const Filters: FC<FiltersProps> = ({ filters, onFiltersChange }) => {
             value={filters.year || ""}
             name="year"
             variant="outlined"
-            inputProps={{ style: { fontSize: 14 } }}
+            inputProps={{ style: { fontSize: 14, textAlign: "right" } }}
             InputLabelProps={{ style: { fontSize: 14 } }}
             onChange={onFiltersChange}
           />
