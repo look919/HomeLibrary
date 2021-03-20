@@ -1,35 +1,43 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 import { AppThunk } from "src/store";
 
+interface Toast {
+  success?: boolean;
+  error?: boolean;
+}
+
 export interface BaseSlicer {
-  refreshReq: boolean;
+  refreshReq?: boolean;
   loading?: boolean;
-  page: number;
-  limit: number;
+  toast: Toast;
 }
 const initialState: BaseSlicer = {
   refreshReq: false,
   loading: false,
-  page: 0,
-  limit: 10,
+  toast: {
+    success: false,
+    error: false,
+  },
 };
 
 const slice = createSlice({
   name: "base",
   initialState,
   reducers: {
-    setRefreshReq(state: BaseSlicer) {
+    setRefreshReqAction(state: BaseSlicer) {
       state.refreshReq = !state.refreshReq;
     },
-    setLoadingReq(
+    setLoadingAction(
       state: BaseSlicer,
       action: PayloadAction<{ loading: boolean }>
     ) {
       state.loading = action.payload.loading;
     },
-    resetPaginationReq(state: BaseSlicer) {
-      state.page = 0;
-      state.limit = 10;
+    setToastAction(state: BaseSlicer, action: PayloadAction<{ toast: Toast }>) {
+      const { error, success } = action.payload.toast;
+
+      if (error !== undefined) state.toast.error = error;
+      if (success !== undefined) state.toast.success = success;
     },
   },
 });
@@ -37,13 +45,13 @@ const slice = createSlice({
 export const reducer = slice.reducer;
 
 export const refreshReq = (): AppThunk => async (dispatch) => {
-  dispatch(slice.actions.setRefreshReq());
+  dispatch(slice.actions.setRefreshReqAction());
 };
 export const setLoading = (loading: boolean): AppThunk => async (dispatch) => {
-  dispatch(slice.actions.setLoadingReq({ loading }));
+  dispatch(slice.actions.setLoadingAction({ loading }));
 };
-export const resetPagination = (): AppThunk => async (dispatch) => {
-  dispatch(slice.actions.resetPaginationReq());
+export const setToast = (toast: Toast): AppThunk => async (dispatch) => {
+  dispatch(slice.actions.setToastAction({ toast }));
 };
 
 export default slice;
