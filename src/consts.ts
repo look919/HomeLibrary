@@ -1,4 +1,5 @@
-import { Book } from "src/types";
+import { title } from "node:process";
+import { Book, BookFilters } from "src/types";
 
 export const onChange = <T>(
   e: any,
@@ -11,23 +12,41 @@ export const onChange = <T>(
   });
 };
 
-interface BookFilters extends Book {
-  numOfPages: "BiggerThan" | "SmallerThan";
-  releaseYear: "BiggerThan" | "SmallerThan";
-}
-
 export function filterBooks<T extends Book>(
   books: T[],
   filters: BookFilters
 ): T[] {
   return books.filter((book: T) => {
-    return book.title.toLowerCase().includes(filters.title.toLowerCase()) &&
-      book.author.toLowerCase().includes(filters.author.toLowerCase()) &&
-      filters.numOfPages === "BiggerThan"
-      ? book.pages > filters.pages
-      : book.pages < filters.pages && filters.releaseYear === "BiggerThan"
-      ? book.year > filters.year
-      : book.year < filters.year;
+    const { title, author, pages, year, pagesCompare, yearCompare } = filters;
+
+    let filteredBook =
+      book.title.toLowerCase().includes(title.toLowerCase()) &&
+      book.author.toLowerCase().includes(author.toLowerCase());
+
+    if (filteredBook) {
+      if (pages && pagesCompare) {
+        switch (pagesCompare) {
+          case "BiggerThan":
+            filteredBook = filteredBook && book.pages > pages;
+            break;
+          case "SmallerThan":
+            filteredBook = filteredBook && book.pages < pages;
+            break;
+        }
+      }
+      if (year && yearCompare) {
+        switch (yearCompare) {
+          case "BiggerThan":
+            filteredBook = filteredBook && book.pages > year;
+            break;
+          case "SmallerThan":
+            filteredBook = filteredBook && book.pages < year;
+            break;
+        }
+      }
+    }
+
+    return filteredBook;
   });
 }
 
@@ -38,3 +57,16 @@ export function applyPagination<T>(
 ): T[] {
   return items.slice(page * limit, page * limit + limit);
 }
+
+export const formatYear = (year: number) => {
+  let yearString = "";
+  switch (Math.sign(year)) {
+    case 1 | 0 | -0:
+      yearString = year.toString();
+      break;
+    case -1:
+      yearString = year.toString().substring(1) + " age bc";
+  }
+
+  return yearString;
+};

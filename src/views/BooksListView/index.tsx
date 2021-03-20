@@ -8,12 +8,25 @@ import {
   TableCell,
   TablePagination,
 } from "@material-ui/core";
-import books from "src/dummyBooksData.json";
-import { Book } from "src/types";
+import booksJSON from "src/dummyBooksData.json";
+import { filterBooks, applyPagination, formatYear } from "src/consts";
+import { Book, BookFilters } from "src/types";
 
 const ListViewBooks = () => {
+  const books: Book[] = JSON.parse(JSON.stringify(booksJSON));
   const [page, setPage] = useState<number>(0);
   const [limit, setLimit] = useState<number>(10);
+  const [filters, setFilters] = useState<BookFilters>({
+    title: "",
+    author: "",
+    pages: null,
+    year: null,
+    pagesCompare: null,
+    yearCompare: null,
+  });
+
+  const filteredBooks = filterBooks(books, filters);
+  const paginatedBooks = applyPagination(filteredBooks, page, limit);
 
   if (!books) return null;
   return (
@@ -29,14 +42,14 @@ const ListViewBooks = () => {
           </TableRow>
         </TableHead>
         <TableBody>
-          {books.map((book: Book, i) => {
+          {paginatedBooks.map((book: Book, i) => {
             const paginatedIndex = page * limit + i;
 
             return (
-              <TableRow key={book.id + paginatedIndex}>
-                <TableCell align="right">{paginatedIndex}</TableCell>
-                <TableCell>{book.author}</TableCell>
-                <TableCell align="center">{book.year}</TableCell>
+              <TableRow key={paginatedIndex}>
+                <TableCell align="right">{paginatedIndex + 1}</TableCell>
+                <TableCell>{book.title + " " + book.author}</TableCell>
+                <TableCell align="center">{formatYear(book.year)}</TableCell>
                 <TableCell align="center">{book.pages}</TableCell>
               </TableRow>
             );
