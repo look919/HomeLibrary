@@ -2,11 +2,10 @@ import { createGlobalStyle } from "styled-components";
 import { DefaultTheme } from "styled-components";
 
 export const Theme: DefaultTheme = {
-  fontFamily:
-    "futura-pt, HelveticaNeue-Light, Helvetica Neue Light, Helvetica Neue, Helvetica, Arial, Lucida Grande, sans-serif;",
+  fontFamily: "Roboto, Helvetica, Arial, sans-serif;",
   colors: {
     primary: "#183395",
-    secondary: "#ddd", //TODO: Find 2nd color
+    secondary: "#303F9F",
     white: "#fff",
     black: "#101",
   },
@@ -38,5 +37,12 @@ export const GlobalStyles = createGlobalStyle`
   h1 {
     font-size: 2em;
   }
+
+  input::-webkit-outer-spin-button,
+  input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+
 
 `;
