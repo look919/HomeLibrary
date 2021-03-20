@@ -20,7 +20,7 @@ import {
   StyledTableHead,
   NoTableCell,
   BookTitleCell,
-} from "src/styles/listView";
+} from "src/styles/test";
 import { Book, BooksFilters } from "src/types";
 
 const ListViewBooks = () => {
