@@ -5,7 +5,7 @@ export const Flex = styled.div`
 `;
 
 export const StyledHeader = styled.header`
-  width: 100%;
+  width: 100vw;
   background-color: ${(props) => props.theme.colors.primary};
   color: ${(props) => props.theme.colors.white};
 
@@ -29,6 +29,7 @@ export const PageContainer = styled.main`
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  max-width: 100em;
 
   padding: 1em;
 `;

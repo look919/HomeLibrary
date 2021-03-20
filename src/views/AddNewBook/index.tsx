@@ -48,10 +48,10 @@ const AddNewBook = () => {
         <PageHeading>Add new book</PageHeading>
         <AddBookForm onSubmit={handleAddBook}>
           <AddBookTextField
-            name="name"
+            name="title"
             value={book.title}
             onChange={(e) => onChange(e, book, setBook)}
-            label="Name"
+            label="Title"
             variant="outlined"
             error={!book.title && sendAttempt}
           />
@@ -65,7 +65,7 @@ const AddNewBook = () => {
           />
           <Flex>
             <AddBookTextFieldSmall
-              name="releaseYear"
+              name="year"
               value={book.year}
               onChange={(e) => onChange(e, book, setBook)}
               label="Release Year"

@@ -7,7 +7,7 @@ export interface Book {
   photo?: string;
 }
 
-export interface BookFilters {
+export interface BooksFilters {
   title: string;
   author: string;
   year: number | null;

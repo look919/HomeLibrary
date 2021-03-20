@@ -11,6 +11,16 @@ export const Theme: DefaultTheme = {
   },
 };
 
+export const device = {
+  laptopL: "(min-width: 90em)",
+  laptop: "(min-width: 80em)",
+  tabletL: "(min-width: 64em)",
+  tablet: "(min-width: 50em)",
+  mobileL: "(min-width: 30em)",
+  mobile: "(min-width: 25em)",
+  mobileS: "(min-width: 21.25em)",
+};
+
 export const GlobalStyles = createGlobalStyle`
   *,
   *::after,
@@ -29,6 +39,14 @@ export const GlobalStyles = createGlobalStyle`
         font-weight: 400;
         color: ${(props) => props.theme.colors.black};
         background-color: ${(props) => props.theme.colors.white};
+        width: 100vw;
+      
+    }
+
+    #root {
+      display: flex;
+        flex-direction: column;
+        align-items: center;
     }
 
   h1,h2,h3 {

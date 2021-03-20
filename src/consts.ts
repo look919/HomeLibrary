@@ -1,5 +1,4 @@
-import { title } from "node:process";
-import { Book, BookFilters } from "src/types";
+import { Book, BooksFilters } from "src/types";
 
 export const onChange = <T>(
   e: any,
@@ -14,7 +13,7 @@ export const onChange = <T>(
 
 export function filterBooks<T extends Book>(
   books: T[],
-  filters: BookFilters
+  filters: BooksFilters
 ): T[] {
   return books.filter((book: T) => {
     const { title, author, pages, year, pagesCompare, yearCompare } = filters;
@@ -37,10 +36,10 @@ export function filterBooks<T extends Book>(
       if (year && yearCompare) {
         switch (yearCompare) {
           case "BiggerThan":
-            filteredBook = filteredBook && book.pages > year;
+            filteredBook = filteredBook && book.year > year;
             break;
           case "SmallerThan":
-            filteredBook = filteredBook && book.pages < year;
+            filteredBook = filteredBook && book.year < year;
             break;
         }
       }
