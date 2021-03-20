@@ -5,7 +5,7 @@ import {
   FiltersTextField,
   FiltersSelect,
   StyledFilterBox,
-} from "src/styles/test";
+} from "src/styles/booksView";
 import { BooksFilters } from "src/types";
 
 interface FiltersProps {

@@ -11,7 +11,7 @@ import {
   AddBookTextField,
   AddBookTextFieldSmall,
   AddBookBtn,
-} from "src/styles/addBook";
+} from "src/styles/addBookView";
 import { onChange } from "src/consts";
 import { Book } from "src/types";
 
