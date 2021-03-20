@@ -73,11 +73,9 @@ const ListViewBooks = () => {
                       alt="book"
                     />
                     <Box display="flex" flexDirection="column">
-                      {
-                        <StyledLink /* to={`/${book.id}`} */ to={"/add"}>
-                          {book.title}
-                        </StyledLink>
-                      }
+                      <StyledLink /* to={`/${book.id}`} */ to={"/add"}>
+                        {book.title}
+                      </StyledLink>
                       <Box display="flex">
                         <SvgIcon fontSize="small" component={PersonIcon} />{" "}
                         <span> {book.author}</span>
