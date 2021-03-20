@@ -3,6 +3,7 @@ import { useHistory } from "react-router-dom";
 import { v4 as uuidv4 } from "uuid";
 import { format } from "date-fns";
 import { useDispatch } from "src/store";
+import Toast from "src/components/Toast";
 import { setToast } from "src/slices/base";
 import { PageContainer, PageHeading, Flex } from "src/styles/layout";
 import {
@@ -11,8 +12,8 @@ import {
   AddBookTextFieldSmall,
   AddBookBtn,
 } from "src/styles/addBook";
+import { onChange } from "src/consts";
 import { Book } from "src/types";
-import Toast from "src/components/Toast";
 
 const AddNewBook = () => {
   const history = useHistory();
@@ -20,24 +21,17 @@ const AddNewBook = () => {
   const [sendAttempt, setSendAttempt] = useState<boolean>(false);
   const [book, setBook] = useState<Book>({
     id: uuidv4(),
-    name: "",
+    title: "",
     author: "",
-    releaseYear: parseInt(format(Date.now(), "yyyy")),
+    year: parseInt(format(Date.now(), "yyyy")),
     pages: 0,
   });
-
-  const onChange = (e: ChangeEvent<HTMLInputElement>) => {
-    setBook({
-      ...book,
-      [e.target.name]: e.target.value,
-    });
-  };
 
   const handleAddBook = (e: ChangeEvent<HTMLFormElement>) => {
     e.preventDefault();
     setSendAttempt(true);
 
-    if (!book.name || !book.author || !book.releaseYear || !book.pages)
+    if (!book.title || !book.author || !book.year || !book.pages)
       return dispatch(
         setToast({
           error: true,
@@ -55,16 +49,16 @@ const AddNewBook = () => {
         <AddBookForm onSubmit={handleAddBook}>
           <AddBookTextField
             name="name"
-            value={book.name}
-            onChange={onChange}
+            value={book.title}
+            onChange={(e) => onChange(e, book, setBook)}
             label="Name"
             variant="outlined"
-            error={!book.name && sendAttempt}
+            error={!book.title && sendAttempt}
           />
           <AddBookTextField
             name="author"
             value={book.author}
-            onChange={onChange}
+            onChange={(e) => onChange(e, book, setBook)}
             label="Author Name"
             variant="outlined"
             error={!book.author && sendAttempt}
@@ -72,18 +66,18 @@ const AddNewBook = () => {
           <Flex>
             <AddBookTextFieldSmall
               name="releaseYear"
-              value={book.releaseYear}
-              onChange={onChange}
+              value={book.year}
+              onChange={(e) => onChange(e, book, setBook)}
               label="Release Year"
               variant="outlined"
-              error={!book.releaseYear && sendAttempt}
+              error={!book.year && sendAttempt}
               type="number"
               inputProps={{ style: { textAlign: "right" } }}
             />
             <AddBookTextFieldSmall
               name="pages"
               value={book.pages}
-              onChange={onChange}
+              onChange={(e) => onChange(e, book, setBook)}
               label="Number of Pages"
               variant="outlined"
               error={!book.pages && sendAttempt}
