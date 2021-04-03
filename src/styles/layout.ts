@@ -1,5 +1,7 @@
 import styled from "styled-components";
 import { Link } from "react-router-dom";
+import { Button } from "@material-ui/core";
+import { device } from "./index";
 
 export const Flex = styled.div`
   display: flex;
@@ -11,12 +13,27 @@ export const StyledHeader = styled.header`
   color: ${(props) => props.theme.colors.white};
 
   display: flex;
+  align-items: center;
   padding: 1.5em 1em;
   margin-bottom: 1em;
+  height: 7em;
+
+  @media ${device.tablet} {
+    height: 10em;
+    padding: 1.5em 3em;
+  }
 `;
 
-export const AppName = styled.section`
+export const AppName = styled(Link)`
   display: flex;
+  margin-right: auto;
+
+  &:link,
+  &:visited {
+    color: ${(props) => props.theme.colors.white};
+    text-decoration: none;
+    cursor: pointer;
+  }
 `;
 
 export const AppNameText = styled.h1`

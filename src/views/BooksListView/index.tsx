@@ -2,8 +2,7 @@ import React, { useState, ChangeEvent } from "react";
 import { PageContainer, PageHeading } from "src/styles/layout";
 import {
   Box,
-  Paper,
-  TableContainer,
+  Table,
   TableRow,
   TableBody,
   TableCell,
@@ -20,6 +19,8 @@ import {
   StyledTableHead,
   NoTableCell,
   BookTitleCell,
+  BookImage,
+  DetailsCell,
 } from "src/styles/booksView";
 import { Book, BooksFilters } from "src/types";
 
@@ -50,14 +51,14 @@ const ListViewBooks = () => {
           onChange(e, filters, setFilters)
         }
       />
-      <TableContainer component={Paper}>
-        <StyledTable>
+      <StyledTable>
+        <Table>
           <StyledTableHead>
             <TableRow>
-              <NoTableCell align="right">No.</NoTableCell>
+              <NoTableCell align="center">No.</NoTableCell>
               <TableCell>Book</TableCell>
-              <TableCell align="center">Release Year</TableCell>
-              <TableCell align="center">Pages</TableCell>
+              <DetailsCell align="center">Release Year</DetailsCell>
+              <DetailsCell align="center">Pages</DetailsCell>
             </TableRow>
           </StyledTableHead>
           <TableBody>
@@ -66,9 +67,9 @@ const ListViewBooks = () => {
 
               return (
                 <TableRow key={paginatedIndex}>
-                  <NoTableCell align="right">{paginatedIndex + 1}</NoTableCell>
+                  <NoTableCell align="center">{paginatedIndex + 1}</NoTableCell>
                   <BookTitleCell>
-                    <img
+                    <BookImage
                       src={require(`../../${book.photo}`).default}
                       alt="book"
                     />
@@ -82,13 +83,15 @@ const ListViewBooks = () => {
                       </Box>
                     </Box>
                   </BookTitleCell>
-                  <TableCell align="center">{formatYear(book.year)}</TableCell>
-                  <TableCell align="center">{book.pages}</TableCell>
+                  <DetailsCell align="center">
+                    {formatYear(book.year)}
+                  </DetailsCell>
+                  <DetailsCell align="center">{book.pages}</DetailsCell>
                 </TableRow>
               );
             })}
           </TableBody>
-        </StyledTable>
+        </Table>
         <TablePagination
           component="div"
           count={filteredBooks.length}
@@ -100,7 +103,7 @@ const ListViewBooks = () => {
           rowsPerPage={limit}
           rowsPerPageOptions={[5, 10, 25]}
         />
-      </TableContainer>
+      </StyledTable>
     </PageContainer>
   );
 };

@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import {
-  Table,
+  TableContainer,
   TableHead,
   TableCell,
   TextField,
@@ -8,8 +8,10 @@ import {
 } from "@material-ui/core";
 import { device } from "./index";
 
-export const StyledTable = styled(Table)`
-  margin: 1.5em 0 !important;
+export const StyledTable = styled(TableContainer)`
+  margin: 3em 0 !important;
+  background-color: ${(props) => props.theme.colors.white};
+  border-radius: 5px;
 `;
 export const StyledTableHead = styled(TableHead)`
   font-weight: 600 !important;
@@ -24,13 +26,33 @@ export const NoTableCell = styled(TableCell)`
   text-align: right;
 
   padding: 0 4px !important;
-  padding-left: 16px !important;
+
+  @media ${device.tablet} {
+    padding-left: 16px !important;
+  }
 `;
+
 export const BookTitleCell = styled(TableCell)`
+  position: relative;
+
   display: flex !important;
   align-items: center;
+`;
 
-  img {
+export const DetailsCell = styled(TableCell)``;
+
+export const BookImage = styled.img`
+  position: absolute;
+  opacity: 0.4;
+  right: 4px;
+
+  height: 64px;
+  width: 42px;
+
+  @media ${device.mobile} {
+    position: relative;
+    opacity: 1;
+
     height: 80px;
     width: 53px;
     margin-right: 1em;
@@ -38,10 +60,14 @@ export const BookTitleCell = styled(TableCell)`
 `;
 
 export const StyledFilters = styled.div`
-  margin: 0.5em !important;
   display: flex;
   flex-direction: column;
   align-items: center;
+  background-color: ${(props) => props.theme.colors.white};
+
+  margin: 0.5em !important;
+  padding: 1em 2.5em;
+  border-radius: 5px;
 
   @media ${device.mobileL} {
     display: grid;
