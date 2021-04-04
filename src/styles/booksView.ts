@@ -2,9 +2,11 @@ import styled from "styled-components";
 import {
   TableContainer,
   TableHead,
+  TableRow,
   TableCell,
   TextField,
   Select,
+  darken,
 } from "@material-ui/core";
 import { device } from "./index";
 
@@ -13,12 +15,20 @@ export const StyledTable = styled(TableContainer)`
   background-color: ${(props) => props.theme.colors.white};
   border-radius: 5px;
 `;
+
 export const StyledTableHead = styled(TableHead)`
   font-weight: 600 !important;
 
   th {
     font-weight: 600 !important;
   }
+`;
+
+export const StyledTableRow = styled(TableRow)<{ isEven: boolean }>`
+  background-color: ${(props) =>
+    props.isEven
+      ? props.theme.colors.white
+      : darken(props.theme.colors.white, 0.1)};
 `;
 
 export const NoTableCell = styled(TableCell)`

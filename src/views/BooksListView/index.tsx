@@ -17,6 +17,7 @@ import { StyledLink } from "src/styles/layout";
 import {
   StyledTable,
   StyledTableHead,
+  StyledTableRow,
   NoTableCell,
   BookTitleCell,
   BookImage,
@@ -66,7 +67,7 @@ const ListViewBooks = () => {
               const paginatedIndex = page * limit + i;
 
               return (
-                <TableRow key={paginatedIndex}>
+                <StyledTableRow isEven={i % 2 === 0} key={paginatedIndex}>
                   <NoTableCell align="center">{paginatedIndex + 1}</NoTableCell>
                   <BookTitleCell>
                     <BookImage
@@ -87,7 +88,7 @@ const ListViewBooks = () => {
                     {formatYear(book.year)}
                   </DetailsCell>
                   <DetailsCell align="center">{book.pages}</DetailsCell>
-                </TableRow>
+                </StyledTableRow>
               );
             })}
           </TableBody>

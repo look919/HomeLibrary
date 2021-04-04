@@ -5,6 +5,7 @@ import { ThemeProvider } from "styled-components";
 import Header from "./components/Header";
 import BooksListView from "./views/BooksListView";
 import AddNewBook from "./views/AddNewBook";
+import DetailsBookView from "./views/DetailsBookView";
 
 function App() {
   return (
@@ -15,7 +16,7 @@ function App() {
         <Switch>
           <Route exact path="/" component={BooksListView} />
           <Route exact path="/add" component={AddNewBook} />
-          <Route component={Header} />
+          <Route path="/details/:id" component={DetailsBookView} />
         </Switch>
       </ThemeProvider>
     </BrowserRouter>
