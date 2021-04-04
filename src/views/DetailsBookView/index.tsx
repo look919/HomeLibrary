@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 import { useLocation } from "react-router-dom";
 import { useDispatch, useSelector } from "src/store";
+import RateBook from "./RateBook";
 import { clearBook, getBook } from "src/slices/books";
 import { PageContainer, PageHeading, Flex } from "src/styles/layout";
 import {
@@ -8,7 +9,6 @@ import {
   BookInformations,
   BookPhoto,
   Description,
-  RateBook,
 } from "src/styles/detailsBookView";
 import { Typography } from "@material-ui/core";
 
@@ -16,15 +16,13 @@ const DetailsBookView = () => {
   const dispatch = useDispatch();
   const location = useLocation();
   const bookId = location.pathname.split("/")[2];
-  const { current: book, list } = useSelector((state) => state.books);
+  const book = useSelector((state) => state.books.current);
 
   useEffect(() => {
     dispatch(getBook(bookId));
 
     return () => dispatch(clearBook());
-  }, [bookId, list, dispatch]);
-
-  if (!book) return null;
+  }, [bookId, dispatch]);
 
   return (
     <>
@@ -51,9 +49,8 @@ const DetailsBookView = () => {
               Mauris finibus, ante quis vulputate mattis, lectus lorem lobortis
               lacus, sed efficitur lorem mi condimentum nisl.
             </Description>
-            <RateBook>
-              <Typography variant="body2">Rate Book:</Typography>
-            </RateBook>
+
+            <RateBook bookId={book.id} bookRating={book.rating} />
           </BookInformations>
         </BookDetails>
       </PageContainer>

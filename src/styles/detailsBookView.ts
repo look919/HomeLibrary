@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { Button } from "@material-ui/core";
 import { device } from "./index";
 
 export const BookDetails = styled.section`
@@ -35,8 +36,15 @@ export const Description = styled.div`
   font-size: 14px;
 `;
 
-export const RateBook = styled.div`
+export const RateBookBox = styled.div`
   display: flex;
   flex-direction: column;
   margin-top: 2em;
+`;
+
+export const RateBookIconBtn = styled(Button)`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 1px !important;
 `;

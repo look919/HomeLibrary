@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 import { GlobalStyles, Theme } from "src/styles";
 import { ThemeProvider } from "styled-components";
-import { useDispatch } from "src/store";
+import { useDispatch, useSelector } from "src/store";
 import { getAllBooks } from "./slices/books";
 import Header from "./components/Header";
 import BooksListView from "./views/BooksListView";
@@ -13,6 +13,7 @@ import TemplateBooks from "src/dummyBooksData.json";
 
 function App() {
   const dispatch = useDispatch();
+  const books = useSelector((state) => state.books.list);
 
   useEffect(() => {
     const booksInStorage = localStorage.getItem("books") || null;
@@ -22,6 +23,8 @@ function App() {
 
     dispatch(getAllBooks(books));
   }, [dispatch]);
+
+  if (!books.length) return null;
 
   return (
     <BrowserRouter>

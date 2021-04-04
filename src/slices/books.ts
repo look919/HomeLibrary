@@ -2,6 +2,11 @@ import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 import { AppThunk } from "src/store";
 import { Book } from "src/types";
 
+type UpdateBookOmit = Omit<Book, "id">;
+type UpdateBook = {
+  [P in keyof UpdateBookOmit]?: UpdateBookOmit[P];
+} & { id: string };
+
 export interface BooksSlicer {
   list: Book[];
   current: Book;
@@ -40,6 +45,18 @@ const slice = createSlice({
     clearBook(state: BooksSlicer) {
       state.current = initialState.current;
     },
+    updateBook(state: BooksSlicer, action: PayloadAction<UpdateBook>) {
+      const { id, rating } = action.payload;
+      const currentBookIndex = state.list.findIndex((book) => book.id === id);
+
+      console.log(currentBookIndex);
+
+      if (currentBookIndex === -1) return;
+
+      if (rating) state.list[currentBookIndex].rating = rating;
+
+      localStorage.setItem("books", JSON.stringify(state.list));
+    },
   },
 });
 
@@ -57,5 +74,7 @@ export const getBook = (bookId: string): AppThunk => async (dispatch) => {
 export const clearBook = (): AppThunk => async (dispatch) => {
   dispatch(slice.actions.clearBook());
 };
-
+export const updateBook = (book: UpdateBook): AppThunk => async (dispatch) => {
+  dispatch(slice.actions.updateBook(book));
+};
 export default slice;
