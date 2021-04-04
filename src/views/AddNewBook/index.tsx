@@ -4,6 +4,7 @@ import { v4 as uuidv4 } from "uuid";
 import { format } from "date-fns";
 import { useDispatch, useSelector } from "src/store";
 import Toast from "src/components/Toast";
+import { addBook } from "src/slices/books";
 import { setToast } from "src/slices/base";
 import { PageContainer, PageHeading, Flex } from "src/styles/layout";
 import {
@@ -28,6 +29,7 @@ const AddNewBook = () => {
     year: parseInt(format(Date.now(), "yyyy")),
     pages: 0,
     photo: "images/new-book.png",
+    rating: 0,
   });
 
   const handleAddBook = (e: ChangeEvent<HTMLFormElement>) => {
@@ -45,6 +47,7 @@ const AddNewBook = () => {
     tempBooks.push(book);
 
     localStorage.setItem("books", JSON.stringify(tempBooks));
+    dispatch(addBook(book));
     history.push("/");
   };
 

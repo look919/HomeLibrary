@@ -67,7 +67,7 @@ const ListViewBooks = () => {
               const paginatedIndex = page * limit + i;
 
               return (
-                <StyledTableRow isRowEven={i % 2 === 0} key={paginatedIndex}>
+                <StyledTableRow $isRowEven={i % 2 === 0} key={paginatedIndex}>
                   <NoTableCell align="center">{paginatedIndex + 1}</NoTableCell>
                   <BookTitleCell>
                     <BookImage

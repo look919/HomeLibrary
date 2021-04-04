@@ -5,6 +5,7 @@ export interface Book {
   year: number;
   pages: number;
   photo: string;
+  rating: number;
 }
 
 export interface BooksFilters {

@@ -3,6 +3,7 @@ import {
   TableContainer,
   TableHead,
   TableRow,
+  TableRowProps,
   TableCell,
   TextField,
   Select,
@@ -24,9 +25,13 @@ export const StyledTableHead = styled(TableHead)`
   }
 `;
 
-export const StyledTableRow = styled(TableRow)<{ isRowEven: boolean }>`
+interface StyledTableRowsProps extends TableRowProps {
+  $isRowEven: boolean;
+}
+
+export const StyledTableRow = styled(TableRow)<StyledTableRowsProps>`
   background-color: ${(props) =>
-    props.isRowEven
+    props.$isRowEven
       ? props.theme.colors.white
       : darken(props.theme.colors.white, 0.1)};
 `;
@@ -54,7 +59,7 @@ export const DetailsCell = styled(TableCell)``;
 export const BookImage = styled.img`
   position: absolute;
   opacity: 0.4;
-  right: 4px;
+  right: 0;
 
   height: 64px;
   width: 42px;
