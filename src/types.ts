@@ -1,10 +1,11 @@
 export interface Book {
-  id?: string;
+  id: string;
   title: string;
   author: string;
   year: number;
   pages: number;
-  photo?: string;
+  photo: string;
+  rating: number;
 }
 
 export interface BooksFilters {
