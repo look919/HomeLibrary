@@ -10,8 +10,8 @@ import {
   SvgIcon,
 } from "@material-ui/core";
 import PersonIcon from "@material-ui/icons/Person";
+import { useSelector } from "src/store";
 import Filters from "./Filters";
-import booksJSON from "src/dummyBooksData.json";
 import { filterBooks, applyPagination, formatYear, onChange } from "src/consts";
 import { StyledLink } from "src/styles/layout";
 import {
@@ -26,7 +26,7 @@ import {
 import { Book, BooksFilters } from "src/types";
 
 const ListViewBooks = () => {
-  const books: Book[] = JSON.parse(JSON.stringify(booksJSON));
+  const books = useSelector((state) => state.books.list);
   const [page, setPage] = useState<number>(0);
   const [limit, setLimit] = useState<number>(10);
   const [filters, setFilters] = useState<BooksFilters>({
@@ -67,7 +67,7 @@ const ListViewBooks = () => {
               const paginatedIndex = page * limit + i;
 
               return (
-                <StyledTableRow isEven={i % 2 === 0} key={paginatedIndex}>
+                <StyledTableRow isRowEven={i % 2 === 0} key={paginatedIndex}>
                   <NoTableCell align="center">{paginatedIndex + 1}</NoTableCell>
                   <BookTitleCell>
                     <BookImage

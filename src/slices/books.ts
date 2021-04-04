@@ -3,10 +3,10 @@ import { AppThunk } from "src/store";
 import { Book } from "src/types";
 
 export interface BooksSlicer {
-  books: Book[];
+  list: Book[];
 }
 const initialState: BooksSlicer = {
-  books: [],
+  list: [],
 };
 
 const slice = createSlice({
@@ -14,7 +14,7 @@ const slice = createSlice({
   initialState,
   reducers: {
     getAllBooks(state: BooksSlicer, action: PayloadAction<{ books: Book[] }>) {
-      state.books = action.payload.books;
+      state.list = action.payload.books;
     },
   },
 });

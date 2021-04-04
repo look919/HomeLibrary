@@ -2,7 +2,7 @@ import React, { useState, ChangeEvent } from "react";
 import { useHistory } from "react-router-dom";
 import { v4 as uuidv4 } from "uuid";
 import { format } from "date-fns";
-import { useDispatch } from "src/store";
+import { useDispatch, useSelector } from "src/store";
 import Toast from "src/components/Toast";
 import { setToast } from "src/slices/base";
 import { PageContainer, PageHeading, Flex } from "src/styles/layout";
@@ -18,6 +18,8 @@ import { Book } from "src/types";
 const AddNewBook = () => {
   const history = useHistory();
   const dispatch = useDispatch();
+  const books = useSelector((state) => state.books.list);
+
   const [sendAttempt, setSendAttempt] = useState<boolean>(false);
   const [book, setBook] = useState<Book>({
     id: uuidv4(),
@@ -25,6 +27,7 @@ const AddNewBook = () => {
     author: "",
     year: parseInt(format(Date.now(), "yyyy")),
     pages: 0,
+    photo: "images/new-book.png",
   });
 
   const handleAddBook = (e: ChangeEvent<HTMLFormElement>) => {
@@ -38,7 +41,10 @@ const AddNewBook = () => {
         })
       );
 
-    localStorage.setItem("books", JSON.stringify(book));
+    const tempBooks: Book[] = JSON.parse(JSON.stringify(books));
+    tempBooks.push(book);
+
+    localStorage.setItem("books", JSON.stringify(tempBooks));
     history.push("/");
   };
 

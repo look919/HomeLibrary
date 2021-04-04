@@ -24,9 +24,9 @@ export const StyledTableHead = styled(TableHead)`
   }
 `;
 
-export const StyledTableRow = styled(TableRow)<{ isEven: boolean }>`
+export const StyledTableRow = styled(TableRow)<{ isRowEven: boolean }>`
   background-color: ${(props) =>
-    props.isEven
+    props.isRowEven
       ? props.theme.colors.white
       : darken(props.theme.colors.white, 0.1)};
 `;

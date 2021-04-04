@@ -4,7 +4,7 @@ export interface Book {
   author: string;
   year: number;
   pages: number;
-  photo?: string;
+  photo: string;
 }
 
 export interface BooksFilters {
