@@ -2,8 +2,7 @@ import React, { useState, ChangeEvent } from "react";
 import { PageContainer, PageHeading } from "src/styles/layout";
 import {
   Box,
-  Paper,
-  TableContainer,
+  Table,
   TableRow,
   TableBody,
   TableCell,
@@ -11,20 +10,23 @@ import {
   SvgIcon,
 } from "@material-ui/core";
 import PersonIcon from "@material-ui/icons/Person";
+import { useSelector } from "src/store";
 import Filters from "./Filters";
-import booksJSON from "src/dummyBooksData.json";
 import { filterBooks, applyPagination, formatYear, onChange } from "src/consts";
 import { StyledLink } from "src/styles/layout";
 import {
   StyledTable,
   StyledTableHead,
+  StyledTableRow,
   NoTableCell,
   BookTitleCell,
+  BookImage,
+  DetailsCell,
 } from "src/styles/booksView";
 import { Book, BooksFilters } from "src/types";
 
 const ListViewBooks = () => {
-  const books: Book[] = JSON.parse(JSON.stringify(booksJSON));
+  const books = useSelector((state) => state.books.list);
   const [page, setPage] = useState<number>(0);
   const [limit, setLimit] = useState<number>(10);
   const [filters, setFilters] = useState<BooksFilters>({
@@ -50,14 +52,14 @@ const ListViewBooks = () => {
           onChange(e, filters, setFilters)
         }
       />
-      <TableContainer component={Paper}>
-        <StyledTable>
+      <StyledTable>
+        <Table>
           <StyledTableHead>
             <TableRow>
-              <NoTableCell align="right">No.</NoTableCell>
+              <NoTableCell align="center">No.</NoTableCell>
               <TableCell>Book</TableCell>
-              <TableCell align="center">Release Year</TableCell>
-              <TableCell align="center">Pages</TableCell>
+              <DetailsCell align="center">Release Year</DetailsCell>
+              <DetailsCell align="center">Pages</DetailsCell>
             </TableRow>
           </StyledTableHead>
           <TableBody>
@@ -65,15 +67,15 @@ const ListViewBooks = () => {
               const paginatedIndex = page * limit + i;
 
               return (
-                <TableRow key={paginatedIndex}>
-                  <NoTableCell align="right">{paginatedIndex + 1}</NoTableCell>
+                <StyledTableRow $isRowEven={i % 2 === 0} key={paginatedIndex}>
+                  <NoTableCell align="center">{paginatedIndex + 1}</NoTableCell>
                   <BookTitleCell>
-                    <img
+                    <BookImage
                       src={require(`../../${book.photo}`).default}
                       alt="book"
                     />
                     <Box display="flex" flexDirection="column">
-                      <StyledLink /* to={`/${book.id}`} */ to={"/add"}>
+                      <StyledLink to={`/book/${book.id}`}>
                         {book.title}
                       </StyledLink>
                       <Box display="flex">
@@ -82,13 +84,15 @@ const ListViewBooks = () => {
                       </Box>
                     </Box>
                   </BookTitleCell>
-                  <TableCell align="center">{formatYear(book.year)}</TableCell>
-                  <TableCell align="center">{book.pages}</TableCell>
-                </TableRow>
+                  <DetailsCell align="center">
+                    {formatYear(book.year)}
+                  </DetailsCell>
+                  <DetailsCell align="center">{book.pages}</DetailsCell>
+                </StyledTableRow>
               );
             })}
           </TableBody>
-        </StyledTable>
+        </Table>
         <TablePagination
           component="div"
           count={filteredBooks.length}
@@ -100,7 +104,7 @@ const ListViewBooks = () => {
           rowsPerPage={limit}
           rowsPerPageOptions={[5, 10, 25]}
         />
-      </TableContainer>
+      </StyledTable>
     </PageContainer>
   );
 };

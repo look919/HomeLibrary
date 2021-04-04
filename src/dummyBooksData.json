@@ -1,802 +1,902 @@
 [
   {
-    "id": "testId",
+    "id": "1",
     "author": "Chinua Achebe",
     "photo": "images/things-fall-apart.jpg",
     "pages": 209,
     "title": "Things Fall Apart",
-    "year": 1958
+    "year": 1958,
+    "rating": 0
   },
   {
-    "id": "testId",
+    "id": "2",
     "author": "Hans Christian Andersen",
     "photo": "images/fairy-tales.jpg",
     "pages": 784,
     "title": "Fairy tales",
-    "year": 1836
+    "year": 1836,
+    "rating": 0
   },
   {
-    "id": "testId",
+    "id": "3",
     "author": "Dante Alighieri",
     "photo": "images/the-divine-comedy.jpg",
     "pages": 928,
     "title": "The Divine Comedy",
-    "year": 1315
+    "year": 1315,
+    "rating": 0
   },
   {
-    "id": "testId",
+    "id": "4",
     "author": "Unknown",
     "photo": "images/the-epic-of-gilgamesh.jpg",
     "pages": 160,
     "title": "The Epic Of Gilgamesh",
-    "year": -1700
+    "year": -1700,
+    "rating": 0
   },
   {
-    "id": "testId",
+    "id": "5",
     "author": "Unknown",
     "photo": "images/the-book-of-job.jpg",
     "pages": 176,
     "title": "The Book Of Job",
-    "year": -600
+    "year": -600,
+    "rating": 0
   },
   {
-    "id": "testId",
+    "id": "6",
     "author": "Unknown",
     "photo": "images/one-thousand-and-one-nights.jpg",
     "pages": 288,
     "title": "One Thousand and One Nights",
-    "year": 1200
+    "year": 1200,
+    "rating": 0
   },
   {
-    "id": "testId",
+    "id": "7",
     "author": "Unknown",
     "photo": "images/njals-saga.jpg",
     "pages": 384,
     "title": "Nj\u00e1l's Saga",
-    "year": 1350
+    "year": 1350,
+    "rating": 0
   },
   {
-    "id": "testId",
+    "id": "8",
     "author": "Jane Austen",
     "photo": "images/pride-and-prejudice.jpg",
     "pages": 226,
     "title": "Pride and Prejudice",
-    "year": 1813
+    "year": 1813,
+    "rating": 0
   },
   {
-    "id": "testId",
+    "id": "9",
     "author": "Honor\u00e9 de Balzac",
     "photo": "images/le-pere-goriot.jpg",
     "pages": 443,
     "title": "Le P\u00e8re Goriot",
-    "year": 1835
+    "year": 1835,
+    "rating": 0
   },
   {
-    "id": "testId",
+    "id": "10",
     "author": "Samuel Beckett",
     "photo": "images/molloy-malone-dies-the-unnamable.jpg",
     "pages": 256,
     "title": "Molloy, Malone Dies, The Unnamable, the trilogy",
-    "year": 1952
+    "year": 1952,
+    "rating": 0
   },
   {
-    "id": "testId",
+    "id": "11",
     "author": "Giovanni Boccaccio",
     "photo": "images/the-decameron.jpg",
     "pages": 1024,
     "title": "The Decameron",
-    "year": 1351
+    "year": 1351,
+    "rating": 0
   },
   {
-    "id": "testId",
+    "id": "12",
     "author": "Jorge Luis Borges",
     "photo": "images/ficciones.jpg",
     "pages": 224,
     "title": "Ficciones",
-    "year": 1965
+    "year": 1965,
+    "rating": 0
   },
   {
-    "id": "testId",
+    "id": "13",
     "author": "Emily Bront\u00eb",
     "photo": "images/wuthering-heights.jpg",
     "pages": 342,
     "title": "Wuthering Heights",
-    "year": 1847
+    "year": 1847,
+    "rating": 0
   },
   {
-    "id": "testId",
+    "id": "14",
     "author": "Albert Camus",
     "photo": "images/l-etranger.jpg",
     "pages": 185,
     "title": "The Stranger",
-    "year": 1942
+    "year": 1942,
+    "rating": 0
   },
   {
-    "id": "testId",
+    "id": "15",
     "author": "Paul Celan",
     "photo": "images/poems-paul-celan.jpg",
     "pages": 320,
     "title": "Poems",
-    "year": 1952
+    "year": 1952,
+    "rating": 0
   },
   {
-    "id": "testId",
+    "id": "16",
     "author": "Louis-Ferdinand C\u00e9line",
     "photo": "images/voyage-au-bout-de-la-nuit.jpg",
     "pages": 505,
     "title": "Journey to the End of the Night",
-    "year": 1932
+    "year": 1932,
+    "rating": 0
   },
   {
-    "id": "testId",
+    "id": "17",
     "author": "Miguel de Cervantes",
     "photo": "images/don-quijote-de-la-mancha.jpg",
     "pages": 1056,
     "title": "Don Quijote De La Mancha",
-    "year": 1610
+    "year": 1610,
+    "rating": 0
   },
   {
-    "id": "testId",
+    "id": "18",
     "author": "Geoffrey Chaucer",
     "photo": "images/the-canterbury-tales.jpg",
     "pages": 544,
     "title": "The Canterbury Tales",
-    "year": 1450
+    "year": 1450,
+    "rating": 0
   },
   {
-    "id": "testId",
+    "id": "19",
     "author": "Anton Chekhov",
     "photo": "images/stories-of-anton-chekhov.jpg",
     "pages": 194,
     "title": "Stories",
-    "year": 1886
+    "year": 1886,
+    "rating": 0
   },
   {
-    "id": "testId",
+    "id": "20",
     "author": "Joseph Conrad",
     "photo": "images/nostromo.jpg",
     "pages": 320,
     "title": "Nostromo",
-    "year": 1904
+    "year": 1904,
+    "rating": 0
   },
   {
-    "id": "testId",
+    "id": "21",
     "author": "Charles Dickens",
     "photo": "images/great-expectations.jpg",
     "pages": 194,
     "title": "Great Expectations",
-    "year": 1861
+    "year": 1861,
+    "rating": 0
   },
   {
-    "id": "testId",
+    "id": "22",
     "author": "Denis Diderot",
     "photo": "images/jacques-the-fatalist.jpg",
     "pages": 596,
     "title": "Jacques the Fatalist",
-    "year": 1796
+    "year": 1796,
+    "rating": 0
   },
   {
-    "id": "testId",
+    "id": "23",
     "author": "Alfred D\u00f6blin",
     "photo": "images/berlin-alexanderplatz.jpg",
     "pages": 600,
     "title": "Berlin Alexanderplatz",
-    "year": 1929
+    "year": 1929,
+    "rating": 0
   },
   {
-    "id": "testId",
+    "id": "24",
     "author": "Fyodor Dostoevsky",
     "photo": "images/crime-and-punishment.jpg",
     "pages": 551,
     "title": "Crime and Punishment",
-    "year": 1866
+    "year": 1866,
+    "rating": 0
   },
   {
-    "id": "testId",
+    "id": "25",
     "author": "Fyodor Dostoevsky",
     "photo": "images/the-idiot.jpg",
     "pages": 656,
     "title": "The Idiot",
-    "year": 1869
+    "year": 1869,
+    "rating": 0
   },
   {
-    "id": "testId",
+    "id": "26",
     "author": "Fyodor Dostoevsky",
     "photo": "images/the-possessed.jpg",
     "pages": 768,
     "title": "The Possessed",
-    "year": 1872
+    "year": 1872,
+    "rating": 0
   },
   {
-    "id": "testId",
+    "id": "27",
     "author": "Fyodor Dostoevsky",
     "photo": "images/the-brothers-karamazov.jpg",
     "pages": 824,
     "title": "The Brothers Karamazov",
-    "year": 1880
+    "year": 1880,
+    "rating": 0
   },
   {
-    "id": "testId",
+    "id": "28",
     "author": "George Eliot",
     "photo": "images/middlemarch.jpg",
     "pages": 800,
     "title": "Middlemarch",
-    "year": 1871
+    "year": 1871,
+    "rating": 0
   },
   {
-    "id": "testId",
+    "id": "29",
     "author": "Ralph Ellison",
     "photo": "images/invisible-man.jpg",
     "pages": 581,
     "title": "Invisible Man",
-    "year": 1952
+    "year": 1952,
+    "rating": 0
   },
   {
-    "id": "testId",
+    "id": "30",
     "author": "Euripides",
     "photo": "images/medea.jpg",
     "pages": 104,
     "title": "Medea",
-    "year": -431
+    "year": -431,
+    "rating": 0
   },
   {
-    "id": "testId",
+    "id": "31",
     "author": "William Faulkner",
     "photo": "images/absalom-absalom.jpg",
     "pages": 313,
     "title": "Absalom, Absalom!",
-    "year": 1936
+    "year": 1936,
+    "rating": 0
   },
   {
-    "id": "testId",
+    "id": "32",
     "author": "William Faulkner",
     "photo": "images/the-sound-and-the-fury.jpg",
     "pages": 326,
     "title": "The Sound and the Fury",
-    "year": 1929
+    "year": 1929,
+    "rating": 0
   },
   {
-    "id": "testId",
+    "id": "33",
     "author": "Gustave Flaubert",
     "photo": "images/madame-bovary.jpg",
     "pages": 528,
     "title": "Madame Bovary",
-    "year": 1857
+    "year": 1857,
+    "rating": 0
   },
   {
-    "id": "testId",
+    "id": "34",
     "author": "Gustave Flaubert",
     "photo": "images/l-education-sentimentale.jpg",
     "pages": 606,
     "title": "Sentimental Education",
-    "year": 1869
+    "year": 1869,
+    "rating": 0
   },
   {
-    "id": "testId",
+    "id": "35",
     "author": "Federico Garc\u00eda Lorca",
     "photo": "images/gypsy-ballads.jpg",
     "pages": 218,
     "title": "Gypsy Ballads",
-    "year": 1928
+    "year": 1928,
+    "rating": 0
   },
   {
-    "id": "testId",
+    "id": "36",
     "author": "Gabriel Garc\u00eda M\u00e1rquez",
     "photo": "images/one-hundred-years-of-solitude.jpg",
     "pages": 417,
     "title": "One Hundred Years of Solitude",
-    "year": 1967
+    "year": 1967,
+    "rating": 0
   },
   {
-    "id": "testId",
+    "id": "37",
     "author": "Gabriel Garc\u00eda M\u00e1rquez",
     "photo": "images/love-in-the-time-of-cholera.jpg",
     "pages": 368,
     "title": "Love in the Time of Cholera",
-    "year": 1985
+    "year": 1985,
+    "rating": 0
   },
   {
-    "id": "testId",
+    "id": "38",
     "author": "Johann Wolfgang von Goethe",
     "photo": "images/faust.jpg",
     "pages": 158,
     "title": "Faust",
-    "year": 1832
+    "year": 1832,
+    "rating": 0
   },
   {
-    "id": "testId",
+    "id": "39",
     "author": "Nikolai Gogol",
     "photo": "images/dead-souls.jpg",
     "pages": 432,
     "title": "Dead Souls",
-    "year": 1842
+    "year": 1842,
+    "rating": 0
   },
   {
-    "id": "testId",
+    "id": "40",
     "author": "G\u00fcnter Grass",
     "photo": "images/the-tin-drum.jpg",
     "pages": 600,
     "title": "The Tin Drum",
-    "year": 1959
+    "year": 1959,
+    "rating": 0
   },
   {
-    "id": "testId",
+    "id": "41",
     "author": "Jo\u00e3o Guimar\u00e3es Rosa",
     "photo": "images/the-devil-to-pay-in-the-backlands.jpg",
     "pages": 494,
     "title": "The Devil to Pay in the Backlands",
-    "year": 1956
+    "year": 1956,
+    "rating": 0
   },
   {
-    "id": "testId",
+    "id": "42",
     "author": "Knut Hamsun",
     "photo": "images/hunger.jpg",
     "pages": 176,
     "title": "Hunger",
-    "year": 1890
+    "year": 1890,
+    "rating": 0
   },
   {
-    "id": "testId",
+    "id": "43",
     "author": "Ernest Hemingway",
     "photo": "images/the-old-man-and-the-sea.jpg",
     "pages": 128,
     "title": "The Old Man and the Sea",
-    "year": 1952
+    "year": 1952,
+    "rating": 0
   },
   {
-    "id": "testId",
+    "id": "44",
     "author": "Homer",
     "photo": "images/the-iliad-of-homer.jpg",
     "pages": 608,
     "title": "Iliad",
-    "year": -735
+    "year": -735,
+    "rating": 0
   },
   {
-    "id": "testId",
+    "id": "45",
     "author": "Homer",
     "photo": "images/the-odyssey-of-homer.jpg",
     "pages": 374,
     "title": "Odyssey",
-    "year": -800
+    "year": -800,
+    "rating": 0
   },
   {
-    "id": "testId",
+    "id": "46",
     "author": "Henrik Ibsen",
     "photo": "images/a-Dolls-house.jpg",
     "pages": 68,
     "title": "A Doll's House",
-    "year": 1879
+    "year": 1879,
+    "rating": 0
   },
   {
-    "id": "testId",
+    "id": "47",
     "author": "James Joyce",
     "photo": "images/ulysses.jpg",
     "pages": 228,
     "title": "Ulysses",
-    "year": 1922
+    "year": 1922,
+    "rating": 0
   },
   {
-    "id": "testId",
+    "id": "48",
     "author": "Franz Kafka",
     "photo": "images/stories-of-franz-kafka.jpg",
     "pages": 488,
     "title": "Stories",
-    "year": 1924
+    "year": 1924,
+    "rating": 0
   },
   {
-    "id": "testId",
+    "id": "49",
     "author": "Franz Kafka",
     "photo": "images/the-trial.jpg",
     "pages": 160,
     "title": "The Trial",
-    "year": 1925
+    "year": 1925,
+    "rating": 0
   },
   {
-    "id": "testId",
+    "id": "50",
     "author": "Franz Kafka",
     "photo": "images/the-castle.jpg",
     "pages": 352,
     "title": "The Castle",
-    "year": 1926
+    "year": 1926,
+    "rating": 0
   },
   {
-    "id": "testId",
+    "id": "51",
     "author": "K\u0101lid\u0101sa",
     "photo": "images/the-recognition-of-shakuntala.jpg",
     "pages": 147,
     "title": "The recognition of Shakuntala",
-    "year": 150
+    "year": 150,
+    "rating": 0
   },
   {
-    "id": "testId",
+    "id": "52",
     "author": "Yasunari Kawabata",
     "photo": "images/the-sound-of-the-mountain.jpg",
     "pages": 288,
     "title": "The Sound of the Mountain",
-    "year": 1954
+    "year": 1954,
+    "rating": 0
   },
   {
-    "id": "testId",
+    "id": "53",
     "author": "Nikos Kazantzakis",
     "photo": "images/zorba-the-greek.jpg",
     "pages": 368,
     "title": "Zorba the Greek",
-    "year": 1946
+    "year": 1946,
+    "rating": 0
   },
   {
-    "id": "testId",
+    "id": "54",
     "author": "D. H. Lawrence",
     "photo": "images/sons-and-lovers.jpg",
     "pages": 432,
     "title": "Sons and Lovers",
-    "year": 1913
+    "year": 1913,
+    "rating": 0
   },
   {
-    "id": "testId",
+    "id": "55",
     "author": "Halld\u00f3r Laxness",
     "photo": "images/independent-people.jpg",
     "pages": 470,
     "title": "Independent People",
-    "year": 1934
+    "year": 1934,
+    "rating": 0
   },
   {
-    "id": "testId",
+    "id": "56",
     "author": "Giacomo Leopardi",
     "photo": "images/poems-giacomo-leopardi.jpg",
     "pages": 184,
     "title": "Poems",
-    "year": 1818
+    "year": 1818,
+    "rating": 0
   },
   {
-    "id": "testId",
+    "id": "57",
     "author": "Doris Lessing",
     "photo": "images/the-golden-notebook.jpg",
     "pages": 688,
     "title": "The Golden Notebook",
-    "year": 1962
+    "year": 1962,
+    "rating": 0
   },
   {
-    "id": "testId",
+    "id": "58",
     "author": "Astrid Lindgren",
     "photo": "images/pippi-longstocking.jpg",
     "pages": 160,
     "title": "Pippi Longstocking",
-    "year": 1945
+    "year": 1945,
+    "rating": 0
   },
   {
-    "id": "testId",
+    "id": "59",
     "author": "Lu Xun",
     "photo": "images/diary-of-a-madman.jpg",
     "pages": 389,
     "title": "Diary of a Madman",
-    "year": 1918
+    "year": 1918,
+    "rating": 0
   },
   {
-    "id": "testId",
+    "id": "60",
     "author": "Naguib Mahfouz",
     "photo": "images/children-of-gebelawi.jpg",
     "pages": 355,
     "title": "Children of Gebelawi",
-    "year": 1959
+    "year": 1959,
+    "rating": 0
   },
   {
-    "id": "testId",
+    "id": "61",
     "author": "Thomas Mann",
     "photo": "images/buddenbrooks.jpg",
     "pages": 736,
     "title": "Buddenbrooks",
-    "year": 1901
+    "year": 1901,
+    "rating": 0
   },
   {
-    "id": "testId",
+    "id": "62",
     "author": "Thomas Mann",
     "photo": "images/the-magic-mountain.jpg",
     "pages": 720,
     "title": "The Magic Mountain",
-    "year": 1924
+    "year": 1924,
+    "rating": 0
   },
   {
-    "id": "testId",
+    "id": "63",
     "author": "Herman Melville",
     "photo": "images/moby-dick.jpg",
     "pages": 378,
     "title": "Moby Dick",
-    "year": 1851
+    "year": 1851,
+    "rating": 0
   },
   {
-    "id": "testId",
+    "id": "64",
     "author": "Michel de Montaigne",
     "photo": "images/essais.jpg",
     "pages": 404,
     "title": "Essays",
-    "year": 1595
+    "year": 1595,
+    "rating": 0
   },
   {
-    "id": "testId",
+    "id": "65",
     "author": "Elsa Morante",
     "photo": "images/history.jpg",
     "pages": 600,
     "title": "History",
-    "year": 1974
+    "year": 1974,
+    "rating": 0
   },
   {
-    "id": "testId",
+    "id": "66",
     "author": "Toni Morrison",
     "photo": "images/beloved.jpg",
     "pages": 321,
     "title": "Beloved",
-    "year": 1987
+    "year": 1987,
+    "rating": 0
   },
   {
-    "id": "testId",
+    "id": "67",
     "author": "Murasaki Shikibu",
     "photo": "images/the-tale-of-genji.jpg",
     "pages": 1360,
     "title": "The Tale of Genji",
-    "year": 1006
+    "year": 1006,
+    "rating": 0
   },
   {
-    "id": "testId",
+    "id": "68",
     "author": "Robert Musil",
     "photo": "images/the-man-without-qualities.jpg",
     "pages": 365,
     "title": "The Man Without Qualities",
-    "year": 1931
+    "year": 1931,
+    "rating": 0
   },
   {
-    "id": "testId",
+    "id": "69",
     "author": "Vladimir Nabokov",
     "photo": "images/lolita.jpg",
     "pages": 317,
     "title": "Lolita",
-    "year": 1955
+    "year": 1955,
+    "rating": 0
   },
   {
-    "id": "testId",
+    "id": "70",
     "author": "George Orwell",
     "photo": "images/nineteen-eighty-four.jpg",
     "pages": 272,
     "title": "Nineteen Eighty-Four",
-    "year": 1949
+    "year": 1949,
+    "rating": 0
   },
   {
-    "id": "testId",
+    "id": "71",
     "author": "Ovid",
     "photo": "images/the-metamorphoses-of-ovid.jpg",
     "pages": 576,
     "title": "Metamorphoses",
-    "year": 100
+    "year": 100,
+    "rating": 0
   },
   {
-    "id": "testId",
+    "id": "72",
     "author": "Fernando Pessoa",
     "photo": "images/the-book-of-disquiet.jpg",
     "pages": 272,
     "title": "The Book of Disquiet",
-    "year": 1928
+    "year": 1928,
+    "rating": 0
   },
   {
-    "id": "testId",
+    "id": "73",
     "author": "Edgar Allan Poe",
     "photo": "images/tales-and-poems-of-edgar-allan-poe.jpg",
     "pages": 842,
     "title": "Tales",
-    "year": 1950
+    "year": 1950,
+    "rating": 0
   },
   {
-    "id": "testId",
+    "id": "74",
     "author": "Marcel Proust",
     "photo": "images/a-la-recherche-du-temps-perdu.jpg",
     "pages": 2408,
     "title": "In Search of Lost Time",
-    "year": 1920
+    "year": 1920,
+    "rating": 0
   },
   {
-    "id": "testId",
+    "id": "75",
     "author": "Fran\u00e7ois Rabelais",
     "photo": "images/gargantua-and-pantagruel.jpg",
     "pages": 623,
     "title": "Gargantua and Pantagruel",
-    "year": 1533
+    "year": 1533,
+    "rating": 0
   },
   {
-    "id": "testId",
+    "id": "76",
     "author": "Juan Rulfo",
     "photo": "images/pedro-paramo.jpg",
     "pages": 124,
     "title": "Pedro P\u00e1ramo",
-    "year": 1955
+    "year": 1955,
+    "rating": 0
   },
   {
-    "id": "testId",
+    "id": "77",
     "author": "Rumi",
     "photo": "images/the-masnavi.jpg",
     "pages": 438,
     "title": "The Masnavi",
-    "year": 1236
+    "year": 1236,
+    "rating": 0
   },
   {
-    "id": "testId",
+    "id": "78",
     "author": "Salman Rushdie",
     "photo": "images/midnights-children.jpg",
     "pages": 536,
     "title": "Midnight's Children",
-    "year": 1981
+    "year": 1981,
+    "rating": 0
   },
   {
-    "id": "testId",
+    "id": "79",
     "author": "Saadi",
     "photo": "images/bostan.jpg",
     "pages": 298,
     "title": "Bostan",
-    "year": 1257
+    "year": 1257,
+    "rating": 0
   },
   {
-    "id": "testId",
+    "id": "80",
     "author": "Tayeb Salih",
     "photo": "images/season-of-migration-to-the-north.jpg",
     "pages": 139,
     "title": "Season of Migration to the North",
-    "year": 1966
+    "year": 1966,
+    "rating": 0
   },
   {
-    "id": "testId",
+    "id": "81",
     "author": "Jos\u00e9 Saramago",
     "photo": "images/blindness.jpg",
     "pages": 352,
     "title": "Blindness",
-    "year": 1995
+    "year": 1995,
+    "rating": 0
   },
   {
-    "id": "testId",
+    "id": "82",
     "author": "William Shakespeare",
     "photo": "images/hamlet.jpg",
     "pages": 432,
     "title": "Hamlet",
-    "year": 1603
+    "year": 1603,
+    "rating": 0
   },
   {
-    "id": "testId",
+    "id": "83",
     "author": "William Shakespeare",
     "photo": "images/king-lear.jpg",
     "pages": 384,
     "title": "King Lear",
-    "year": 1608
+    "year": 1608,
+    "rating": 0
   },
   {
-    "id": "testId",
+    "id": "84",
     "author": "William Shakespeare",
     "photo": "images/othello.jpg",
     "pages": 314,
     "title": "Othello",
-    "year": 1609
+    "year": 1609,
+    "rating": 0
   },
   {
-    "id": "testId",
+    "id": "85",
     "author": "Sophocles",
     "photo": "images/oedipus-the-king.jpg",
     "pages": 88,
     "title": "Oedipus the King",
-    "year": -430
+    "year": -430,
+    "rating": 0
   },
   {
-    "id": "testId",
+    "id": "86",
     "author": "Stendhal",
     "photo": "images/le-rouge-et-le-noir.jpg",
     "pages": 576,
     "title": "The Red and the Black",
-    "year": 1830
+    "year": 1830,
+    "rating": 0
   },
   {
-    "id": "testId",
+    "id": "87",
     "author": "Laurence Sterne",
     "photo": "images/the-life-and-opinions-of-tristram-shandy.jpg",
     "pages": 640,
     "title": "The Life And Opinions of Tristram Shandy",
-    "year": 1760
+    "year": 1760,
+    "rating": 0
   },
   {
-    "id": "testId",
+    "id": "88",
     "author": "Italo Svevo",
     "photo": "images/confessions-of-zeno.jpg",
     "pages": 412,
     "title": "Confessions of Zeno",
-    "year": 1923
+    "year": 1923,
+    "rating": 0
   },
   {
-    "id": "testId",
+    "id": "89",
     "author": "Jonathan Swift",
     "photo": "images/gullivers-travels.jpg",
     "pages": 178,
     "title": "Gulliver's Travels",
-    "year": 1726
+    "year": 1726,
+    "rating": 0
   },
   {
-    "id": "testId",
+    "id": "90",
     "author": "Leo Tolstoy",
     "photo": "images/war-and-peace.jpg",
     "pages": 1296,
     "title": "War and Peace",
-    "year": 1867
+    "year": 1867,
+    "rating": 0
   },
   {
-    "id": "testId",
+    "id": "91",
     "author": "Leo Tolstoy",
     "photo": "images/anna-karenina.jpg",
     "pages": 864,
     "title": "Anna Karenina",
-    "year": 1877
+    "year": 1877,
+    "rating": 0
   },
   {
-    "id": "testId",
+    "id": "92",
     "author": "Leo Tolstoy",
     "photo": "images/the-death-of-ivan-ilyich.jpg",
     "pages": 92,
     "title": "The Death of Ivan Ilyich",
-    "year": 1886
+    "year": 1886,
+    "rating": 0
   },
   {
-    "id": "testId",
+    "id": "93",
     "author": "Mark Twain",
     "photo": "images/the-adventures-of-huckleberry-finn.jpg",
     "pages": 224,
     "title": "The Adventures of Huckleberry Finn",
-    "year": 1884
+    "year": 1884,
+    "rating": 0
   },
   {
-    "id": "testId",
+    "id": "94",
     "author": "Valmiki",
     "photo": "images/ramayana.jpg",
     "pages": 152,
     "title": "Ramayana",
-    "year": -450
+    "year": -450,
+    "rating": 0
   },
   {
-    "id": "testId",
+    "id": "95",
     "author": "Virgil",
     "photo": "images/the-aeneid.jpg",
     "pages": 442,
     "title": "The Aeneid",
-    "year": -23
+    "year": -23,
+    "rating": 0
   },
   {
-    "id": "testId",
+    "id": "96",
     "author": "Vyasa",
     "photo": "images/the-mahab-harata.jpg",
     "pages": 276,
     "title": "Mahabharata",
-    "year": -700
+    "year": -700,
+    "rating": 0
   },
   {
-    "id": "testId",
+    "id": "97",
     "author": "Walt Whitman",
     "photo": "images/leaves-of-grass.jpg",
     "pages": 152,
     "title": "Leaves of Grass",
-    "year": 1855
+    "year": 1855,
+    "rating": 0
   },
   {
-    "id": "testId",
+    "id": "98",
     "author": "Virginia Woolf",
     "photo": "images/mrs-dalloway.jpg",
     "pages": 216,
     "title": "Mrs Dalloway",
-    "year": 1925
+    "year": 1925,
+    "rating": 0
   },
   {
-    "id": "testId",
+    "id": "99",
     "author": "Virginia Woolf",
     "photo": "images/to-the-lighthouse.jpg",
     "pages": 209,
     "title": "To the Lighthouse",
-    "year": 1927
+    "year": 1927,
+    "rating": 0
   },
   {
-    "id": "testId",
+    "id": "100",
     "author": "Marguerite Yourcenar",
     "photo": "images/memoirs-of-hadrian.jpg",
     "pages": 408,
     "title": "Memoirs of Hadrian",
-    "year": 1951
+    "year": 1951,
+    "rating": 0
   }
 ]

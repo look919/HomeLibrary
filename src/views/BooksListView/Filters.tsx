@@ -62,6 +62,7 @@ const Filters: FC<FiltersProps> = ({ filters, onFiltersChange }) => {
             inputProps={{ style: { fontSize: 14, textAlign: "right" } }}
             InputLabelProps={{ style: { fontSize: 14 } }}
             onChange={onFiltersChange}
+            disabled={!filters.pagesCompare}
           />
         </StyledFilterBox>
         <StyledFilterBox>
@@ -87,6 +88,7 @@ const Filters: FC<FiltersProps> = ({ filters, onFiltersChange }) => {
             inputProps={{ style: { fontSize: 14, textAlign: "right" } }}
             InputLabelProps={{ style: { fontSize: 14 } }}
             onChange={onFiltersChange}
+            disabled={!filters.yearCompare}
           />
         </StyledFilterBox>
       </StyledFilters>
