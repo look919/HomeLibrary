@@ -1,23 +1,29 @@
 import React, { useEffect } from "react";
 import { useLocation } from "react-router-dom";
-import { useDispatch } from "src/store";
+import { useDispatch, useSelector } from "src/store";
+import { clearBook, getBook } from "src/slices/books";
 import { PageContainer, PageHeading, Flex } from "src/styles/layout";
-import { DetailsBookComponent } from "src/styles/detailsBookView";
+import { BookDetails } from "src/styles/detailsBookView";
 
 const DetailsBookView = () => {
+  const dispatch = useDispatch();
   const location = useLocation();
   const bookId = location.pathname.split("/")[2];
-  const dispatch = useDispatch();
+  const { current: book, list } = useSelector((state) => state.books);
 
   useEffect(() => {
-    console.log();
-  });
+    dispatch(getBook(bookId));
+
+    return () => dispatch(clearBook());
+  }, [bookId, list, dispatch]);
+
+  if (!book) return null;
 
   return (
     <>
       <PageContainer>
-        <PageHeading>Details Book View</PageHeading>
-        <DetailsBookComponent>Test</DetailsBookComponent>
+        <PageHeading>{book.title}</PageHeading>
+        <BookDetails></BookDetails>
       </PageContainer>
     </>
   );

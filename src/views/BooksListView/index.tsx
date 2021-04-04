@@ -75,7 +75,7 @@ const ListViewBooks = () => {
                       alt="book"
                     />
                     <Box display="flex" flexDirection="column">
-                      <StyledLink /* to={`/${book.id}`} */ to={"/add"}>
+                      <StyledLink to={`/book/${book.id}`}>
                         {book.title}
                       </StyledLink>
                       <Box display="flex">
