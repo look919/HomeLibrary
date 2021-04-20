@@ -19,16 +19,16 @@ Application created for a college course - interface design (Projektowanie Inter
 #### 2. ScreenShots from live version
 
 2a. Default View of Home Page
-![Alt text](./HomeLibrary/src/images/docs/homePage.png)
+![Alt text](./src/images/docs/homePage.png)
 
 2b. Collection of books after applying filters
-![Alt text](./HomeLibrary/src/images/docs/homePageFiltered.png)
+![Alt text](./src/images/docs/homePageFiltered.png)
 
 2c. Add new book page
-![Alt text](./HomeLibrary/src/images/docs/addPage.png)
+![Alt text](./src/images/docs/addPage.png)
 
 2d. Book details page
-![Alt text](./HomeLibrary/src/images/docs/addPage.png)
+![Alt text](./src/images/docs/addPage.png)
 
 #### 3. Funcionalities & Properties
     - 3 Pages: HomePage, Add book Page, Book Details Page
@@ -38,4 +38,4 @@ Application created for a college course - interface design (Projektowanie Inter
 
 #### 4. Navigation Graph
 
-![Alt text](./HomeLibrary/src/images/docs/navConcept.png)
+![Alt text](./src/images/docs/navConcept.png)
