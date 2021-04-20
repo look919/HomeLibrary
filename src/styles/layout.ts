@@ -54,6 +54,9 @@ export const PageContainer = styled.main`
 export const PageHeading = styled.h2`
   margin: 2em 0;
   font-size: 1.8em;
+  padding: 0.4em 0.7em;
+  border-radius: 4px;
+  background-color: ${(props) => props.theme.colors.white};
 `;
 
 export const StyledLink = styled(Link)`
