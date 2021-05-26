@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { Button } from "@material-ui/core";
 import { Link } from "react-router-dom";
 import { device } from "./index";
 
@@ -9,6 +10,7 @@ export const Flex = styled.div`
 export const StyledHeader = styled.header`
   width: 100vw;
   background-color: ${(props) => props.theme.colors.primary};
+  /* background-color: ${(props) => props.color}; */
   color: ${(props) => props.theme.colors.white};
 
   display: flex;
@@ -21,6 +23,17 @@ export const StyledHeader = styled.header`
     height: 10em;
     padding: 1.5em 3em;
   }
+`;
+
+export const MenuButton = styled(Button)`
+  &:not(:last-child) {
+    margin-right: 1.5em;
+  }
+`;
+
+export const IconWrapper = styled.div`
+  color: yellow;
+  font-size: 30px;
 `;
 
 export const AppName = styled(Link)`
@@ -56,13 +69,13 @@ export const PageHeading = styled.h2`
   font-size: 1.8em;
   padding: 0.4em 0.7em;
   border-radius: 4px;
-  background-color: ${(props) => props.theme.colors.white};
+  background-color: ${(props) => props.theme.colors.bgcPrimary};
 `;
 
 export const StyledLink = styled(Link)`
   &:link,
   &:visited {
-    color: ${(props) => props.theme.colors.black};
+    color: ${(props) => props.theme.colors.fontColorPrimary};
     text-decoration: none;
     cursor: pointer;
   }

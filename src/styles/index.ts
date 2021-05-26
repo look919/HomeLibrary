@@ -9,6 +9,20 @@ export const Theme: DefaultTheme = {
     secondary: "#303F9F",
     white: "#def",
     black: "#101",
+    bgcPrimary: "#def",
+    fontColorPrimary: "#101",
+  },
+};
+
+export const DarkTheme: DefaultTheme = {
+  fontFamily: "Roboto, Helvetica, Arial, sans-serif;",
+  colors: {
+    primary: "#101",
+    secondary: "#303F9F",
+    white: "#def",
+    black: "#101",
+    bgcPrimary: "#323",
+    fontColorPrimary: "#def",
   },
 };
 
@@ -37,11 +51,26 @@ export const GlobalStyles = createGlobalStyle`
         font-size: 62.5%;
         font-family: ${(props) => props.theme.fontFamily};
         font-weight: 400;
-        color: ${(props) => props.theme.colors.black};
-        background-image: linear-gradient(to right bottom, rgba(221, 238, 255, 0.8), rgba(126, 146, 166, 0.8)), url(${BackgroundImage});
+        color: ${(props) => props.theme.colors.fontColorPrimary};
+        background-image: url(${BackgroundImage});
         width: 100%;
         overflow-x:hidden;
         min-height: 100vh;
+
+        &::before {
+          content: " ";
+          display: block;
+          position: fixed;
+
+          left: 0;
+          top: 0;
+          width: 100%;
+          height: 100%;
+
+          opacity: 0.5;
+          z-index: -1;
+          background-color: ${(props) => props.theme.colors.bgcPrimary};;
+        }
     }
 
     #root {

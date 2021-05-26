@@ -13,7 +13,7 @@ import { device } from "./index";
 
 export const StyledTable = styled(TableContainer)`
   margin: 3em 0 !important;
-  background-color: ${(props) => props.theme.colors.white};
+  background-color: ${(props) => props.theme.colors.bgcPrimary};
   border-radius: 5px;
 `;
 
@@ -32,8 +32,8 @@ interface StyledTableRowsProps extends TableRowProps {
 export const StyledTableRow = styled(TableRow)<StyledTableRowsProps>`
   background-color: ${(props) =>
     props.$isRowEven
-      ? props.theme.colors.white
-      : darken(props.theme.colors.white, 0.1)};
+      ? props.theme.colors.bgcPrimary
+      : darken(props.theme.colors.bgcPrimary, 0.1)};
 `;
 
 export const NoTableCell = styled(TableCell)`
@@ -78,7 +78,7 @@ export const StyledFilters = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: ${(props) => props.theme.colors.white};
+  background-color: ${(props) => props.theme.colors.bgcPrimary};
 
   margin: 0.5em !important;
   padding: 1em 2.5em;
