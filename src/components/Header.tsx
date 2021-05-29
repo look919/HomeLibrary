@@ -1,16 +1,9 @@
 import React, { FC } from "react";
 import { Link, useLocation } from "react-router-dom";
-import { Button, SvgIcon } from "@material-ui/core";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faSun, faMoon } from "@fortawesome/free-solid-svg-icons";
+import { Button, IconButton, SvgIcon } from "@material-ui/core";
+import { Sun as LightThemeIcon, Moon as DarkThemeIcon } from "react-feather";
 import { BookOpen as BookOpenIcon } from "react-feather";
-import {
-  StyledHeader,
-  AppName,
-  AppNameText,
-  MenuButton,
-  IconWrapper,
-} from "src/styles/layout";
+import { StyledHeader, AppName, AppNameText } from "src/styles/layout";
 
 interface HeaderProps {
   theme: string;
@@ -28,15 +21,15 @@ const Header: FC<HeaderProps> = ({ theme, themeToggler }) => {
           <BookOpenIcon />
         </SvgIcon>
       </AppName>
-      <MenuButton onClick={themeToggler}>
-        <IconWrapper>
+      <IconButton onClick={themeToggler}>
+        <SvgIcon fontSize="large" color="inherit">
           {theme === "light" ? (
-            <FontAwesomeIcon icon={faSun} />
+            <LightThemeIcon color="yellow" />
           ) : (
-            <FontAwesomeIcon icon={faMoon} />
+            <DarkThemeIcon color="gray" />
           )}
-        </IconWrapper>
-      </MenuButton>
+        </SvgIcon>
+      </IconButton>
       {location.pathname !== "/add" && (
         <Button variant="contained" color="primary" component={Link} to="/add">
           Add Book
