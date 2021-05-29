@@ -36,6 +36,11 @@ export const Description = styled.div`
   font-size: 14px;
 `;
 
+export const BooksOptionsContainer = styled.div`
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+`;
 export const RateBookBox = styled.div`
   display: flex;
   flex-direction: column;

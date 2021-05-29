@@ -9,20 +9,12 @@ type UpdateBook = {
 
 export interface BooksSlicer {
   list: Book[];
-  current: Book;
+  current: Book | null;
   isListLoaded: boolean;
 }
 const initialState: BooksSlicer = {
   list: [],
-  current: {
-    id: "",
-    title: "",
-    author: "",
-    year: 0,
-    pages: 0,
-    photo: "",
-    rating: 0,
-  },
+  current: null,
   isListLoaded: false,
 };
 
@@ -52,11 +44,16 @@ const slice = createSlice({
       const { id, rating } = action.payload;
       const currentBookIndex = state.list.findIndex((book) => book.id === id);
 
-      console.log(currentBookIndex);
-
       if (currentBookIndex === -1) return;
-
       if (rating) state.list[currentBookIndex].rating = rating;
+
+      localStorage.setItem("books", JSON.stringify(state.list));
+    },
+    deleteBook(state: BooksSlicer, action: PayloadAction<{ bookId: string }>) {
+      state.list = state.list.filter(
+        (book) => book.id !== action.payload.bookId
+      );
+      state.current = null;
 
       localStorage.setItem("books", JSON.stringify(state.list));
     },
@@ -88,4 +85,10 @@ export const updateBook =
   async (dispatch) => {
     dispatch(slice.actions.updateBook(book));
   };
+export const deleteBook =
+  (bookId: string): AppThunk =>
+  async (dispatch) => {
+    dispatch(slice.actions.deleteBook({ bookId }));
+  };
+
 export default slice;

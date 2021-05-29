@@ -1,20 +1,22 @@
 import React, { useEffect } from "react";
-import { useLocation } from "react-router-dom";
+import { useHistory, useLocation } from "react-router-dom";
+import { Button, Typography } from "@material-ui/core";
 import { useDispatch, useSelector } from "src/store";
+import { clearBook, deleteBook, getBook } from "src/slices/books";
 import RateBook from "./RateBook";
-import { clearBook, getBook } from "src/slices/books";
 import { PageContainer, PageHeading, Flex } from "src/styles/layout";
 import {
   BookDetails,
   BookInformations,
+  BooksOptionsContainer,
   BookPhoto,
   Description,
 } from "src/styles/detailsBookView";
-import { Typography } from "@material-ui/core";
 
 const DetailsBookView = () => {
   const dispatch = useDispatch();
   const location = useLocation();
+  const history = useHistory();
   const bookId = location.pathname.split("/")[2];
   const book = useSelector((state) => state.books.current);
 
@@ -23,6 +25,13 @@ const DetailsBookView = () => {
 
     return () => dispatch(clearBook());
   }, [bookId, dispatch]);
+
+  const handleDeleteBook = () => {
+    dispatch(deleteBook(bookId));
+    history.push("/");
+  };
+
+  if (!book) return null;
 
   return (
     <>
@@ -49,8 +58,16 @@ const DetailsBookView = () => {
               Mauris finibus, ante quis vulputate mattis, lectus lorem lobortis
               lacus, sed efficitur lorem mi condimentum nisl.
             </Description>
-
-            <RateBook bookId={book.id} bookRating={book.rating} />
+            <BooksOptionsContainer>
+              <RateBook bookId={book.id} bookRating={book.rating} />
+              <Button
+                variant="contained"
+                color="secondary"
+                onClick={handleDeleteBook}
+              >
+                Delete Book
+              </Button>
+            </BooksOptionsContainer>
           </BookInformations>
         </BookDetails>
       </PageContainer>
