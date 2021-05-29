@@ -3,7 +3,6 @@ import { Divider } from "@material-ui/core";
 import TextField from "src/components/TextField";
 import {
   StyledFilters,
-  FiltersTextField,
   FiltersSelect,
   StyledFilterBox,
 } from "src/styles/booksView";
@@ -23,12 +22,14 @@ const Filters: FC<FiltersProps> = ({ filters, onFiltersChange }) => {
           label="Title"
           name="title"
           onChange={onFiltersChange}
+          withCheckBox={true}
         />
         <TextField
           value={filters.author}
           label="Author"
           name="author"
           onChange={onFiltersChange}
+          withCheckBox={true}
         />
         <StyledFilterBox>
           <FiltersSelect

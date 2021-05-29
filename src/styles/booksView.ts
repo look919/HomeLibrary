@@ -104,7 +104,7 @@ export const FiltersTextField = styled(TextField)`
 export const FiltersSelect = styled(Select)`
   height: 39px;
   margin-right: 5px;
-  width: 150%;
+  width: 100%;
   margin-bottom: 0.8em;
 
   &:not(:last-child) {
