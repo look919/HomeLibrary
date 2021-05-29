@@ -1,5 +1,6 @@
 import React, { FC } from "react";
 import { Divider } from "@material-ui/core";
+import TextField from "src/components/TextField";
 import {
   StyledFilters,
   FiltersTextField,
@@ -17,26 +18,16 @@ const Filters: FC<FiltersProps> = ({ filters, onFiltersChange }) => {
   return (
     <>
       <StyledFilters>
-        <FiltersTextField
-          size="small"
-          fullWidth
-          label="Title"
+        <TextField
           value={filters.title}
+          label="Title"
           name="title"
-          variant="outlined"
           onChange={onFiltersChange}
-          inputProps={{ style: { fontSize: 14 } }}
-          InputLabelProps={{ style: { fontSize: 14 } }}
         />
-        <FiltersTextField
-          size="small"
-          fullWidth
-          label="Author"
+        <TextField
           value={filters.author}
+          label="Author"
           name="author"
-          variant="outlined"
-          inputProps={{ style: { fontSize: 14 } }}
-          InputLabelProps={{ style: { fontSize: 14 } }}
           onChange={onFiltersChange}
         />
         <StyledFilterBox>
@@ -51,16 +42,10 @@ const Filters: FC<FiltersProps> = ({ filters, onFiltersChange }) => {
             <option value={"BiggerThan"}>Bigger than</option>
             <option value={"SmallerThan"}>Smaller than</option>
           </FiltersSelect>
-          <FiltersTextField
-            size="small"
-            type="number"
-            fullWidth
+          <TextField
+            value={filters.pages?.toLocaleString() || ""}
             label="Pages"
-            value={filters.pages || ""}
             name="pages"
-            variant="outlined"
-            inputProps={{ style: { fontSize: 14, textAlign: "right" } }}
-            InputLabelProps={{ style: { fontSize: 14 } }}
             onChange={onFiltersChange}
             disabled={!filters.pagesCompare}
           />
@@ -77,16 +62,10 @@ const Filters: FC<FiltersProps> = ({ filters, onFiltersChange }) => {
             <option value={"BiggerThan"}>Bigger than</option>
             <option value={"SmallerThan"}>Smaller than</option>
           </FiltersSelect>
-          <FiltersTextField
-            size="small"
-            type="number"
+          <TextField
+            value={filters.year?.toLocaleString() || ""}
             label="Release Year"
-            fullWidth
-            value={filters.year || ""}
             name="year"
-            variant="outlined"
-            inputProps={{ style: { fontSize: 14, textAlign: "right" } }}
-            InputLabelProps={{ style: { fontSize: 14 } }}
             onChange={onFiltersChange}
             disabled={!filters.yearCompare}
           />
