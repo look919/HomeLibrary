@@ -9,8 +9,8 @@ export const Theme: DefaultTheme = {
     secondary: "#303F9F",
     white: "#def",
     black: "#101",
-    bgcPrimary: "#def",
-    fontColorPrimary: "#101",
+    background: "#def",
+    fontColor: "#101",
   },
 };
 
@@ -21,8 +21,8 @@ export const DarkTheme: DefaultTheme = {
     secondary: "#303F9F",
     white: "#def",
     black: "#101",
-    bgcPrimary: "#323",
-    fontColorPrimary: "#def",
+    background: "#323",
+    fontColor: "#def",
   },
 };
 
@@ -51,7 +51,7 @@ export const GlobalStyles = createGlobalStyle`
         font-size: 62.5%;
         font-family: ${(props) => props.theme.fontFamily};
         font-weight: 400;
-        color: ${(props) => props.theme.colors.fontColorPrimary};
+        color: ${(props) => props.theme.colors.fontColor};
         background-image: url(${BackgroundImage});
         width: 100%;
         overflow-x:hidden;
@@ -69,7 +69,7 @@ export const GlobalStyles = createGlobalStyle`
 
           opacity: 0.5;
           z-index: -1;
-          background-color: ${(props) => props.theme.colors.bgcPrimary};;
+          background-color: ${(props) => props.theme.colors.background};;
         }
     }
 

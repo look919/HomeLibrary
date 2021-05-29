@@ -69,13 +69,13 @@ export const PageHeading = styled.h2`
   font-size: 1.8em;
   padding: 0.4em 0.7em;
   border-radius: 4px;
-  background-color: ${(props) => props.theme.colors.bgcPrimary};
+  background-color: ${(props) => props.theme.colors.background};
 `;
 
 export const StyledLink = styled(Link)`
   &:link,
   &:visited {
-    color: ${(props) => props.theme.colors.fontColorPrimary};
+    color: ${(props) => props.theme.colors.fontColor};
     text-decoration: none;
     cursor: pointer;
   }

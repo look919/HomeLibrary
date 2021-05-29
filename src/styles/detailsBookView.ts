@@ -4,7 +4,7 @@ import { device } from "./index";
 
 export const BookDetails = styled.section`
   width: 100%;
-  background-color: ${(props) => props.theme.colors.bgcPrimary};
+  background-color: ${(props) => props.theme.colors.background};
 
   display: flex;
   flex-direction: column;
