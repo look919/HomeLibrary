@@ -11,11 +11,12 @@ import {
 } from "@material-ui/core";
 import PersonIcon from "@material-ui/icons/Person";
 import { useSelector } from "src/store";
+import NoBooks from "./NoBooks";
 import Filters from "./Filters";
 import { filterBooks, applyPagination, formatYear, onChange } from "src/consts";
 import { StyledLink } from "src/styles/layout";
 import {
-  StyledTable,
+  StyledTableContainer,
   StyledTableHead,
   StyledTableRow,
   NoTableCell,
@@ -26,7 +27,7 @@ import {
 import { Book, BooksFilters } from "src/types";
 
 const ListViewBooks = () => {
-  const books = useSelector((state) => state.books.list);
+  const { list: books, isListLoaded } = useSelector((state) => state.books);
   const [page, setPage] = useState<number>(0);
   const [limit, setLimit] = useState<number>(10);
   const [filters, setFilters] = useState<BooksFilters>({
@@ -41,7 +42,14 @@ const ListViewBooks = () => {
   const filteredBooks = filterBooks(books, filters);
   const paginatedBooks = applyPagination(filteredBooks, page, limit);
 
-  if (!books) return null;
+  const onPageChange = (e: any, newPage: number) => setPage(newPage);
+  const onLimitChange = (e: ChangeEvent<HTMLInputElement>) => {
+    setPage(0);
+    setLimit(parseInt(e.target.value));
+  };
+
+  if (!isListLoaded) return null;
+  if (!books.length) return <NoBooks />;
 
   return (
     <PageContainer>
@@ -52,7 +60,7 @@ const ListViewBooks = () => {
           onChange(e, filters, setFilters)
         }
       />
-      <StyledTable>
+      <StyledTableContainer>
         <Table>
           <StyledTableHead>
             <TableRow>
@@ -96,15 +104,13 @@ const ListViewBooks = () => {
         <TablePagination
           component="div"
           count={filteredBooks.length}
-          onChangePage={(e: any, newPage: number) => setPage(newPage)}
-          onChangeRowsPerPage={(e: ChangeEvent<HTMLInputElement>) =>
-            setLimit(parseInt(e.target.value))
-          }
+          onChangePage={onPageChange}
+          onChangeRowsPerPage={onLimitChange}
           page={page}
           rowsPerPage={limit}
           rowsPerPageOptions={[5, 10, 25]}
         />
-      </StyledTable>
+      </StyledTableContainer>
     </PageContainer>
   );
 };

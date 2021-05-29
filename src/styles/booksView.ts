@@ -11,7 +11,7 @@ import {
 } from "@material-ui/core";
 import { device } from "./index";
 
-export const StyledTable = styled(TableContainer)`
+export const StyledTableContainer = styled(TableContainer)`
   margin: 3em 0 !important;
   background-color: ${(props) => props.theme.colors.white};
   border-radius: 5px;
@@ -123,5 +123,31 @@ export const StyledFilterBox = styled.div`
 
   &:not(:last-child) {
     margin-bottom: 0;
+  }
+`;
+
+export const NoBooksDataView = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2em;
+`;
+
+export const NoBooksDataImage = styled.img`
+  width: 80%;
+
+  @media ${device.mobileL} {
+    max-width: 40em;
+  }
+`;
+
+export const NoBooksButtonContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  button {
+    margin-top: 1em;
   }
 `;

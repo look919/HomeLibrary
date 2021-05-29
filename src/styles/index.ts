@@ -45,7 +45,7 @@ export const GlobalStyles = createGlobalStyle`
     }
 
     #root {
-      display: flex;
+        display: flex;
         flex-direction: column;
         align-items: center;
     }
