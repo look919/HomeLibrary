@@ -16,3 +16,5 @@ export interface BooksFilters {
   pagesCompare: "BiggerThan" | "SmallerThan" | null;
   yearCompare: "BiggerThan" | "SmallerThan" | null;
 }
+
+export type ThemeType = "dark" | "light";

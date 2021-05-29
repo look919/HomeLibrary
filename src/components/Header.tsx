@@ -1,10 +1,23 @@
-import React from "react";
+import React, { FC } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Button, SvgIcon } from "@material-ui/core";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faSun, faMoon } from "@fortawesome/free-solid-svg-icons";
 import { BookOpen as BookOpenIcon } from "react-feather";
-import { StyledHeader, AppName, AppNameText } from "src/styles/layout";
+import {
+  StyledHeader,
+  AppName,
+  AppNameText,
+  MenuButton,
+  IconWrapper,
+} from "src/styles/layout";
 
-const Header = () => {
+interface HeaderProps {
+  theme: string;
+  themeToggler: () => void;
+}
+
+const Header: FC<HeaderProps> = ({ theme, themeToggler }) => {
   const location = useLocation();
 
   return (
@@ -15,6 +28,15 @@ const Header = () => {
           <BookOpenIcon />
         </SvgIcon>
       </AppName>
+      <MenuButton onClick={themeToggler}>
+        <IconWrapper>
+          {theme === "light" ? (
+            <FontAwesomeIcon icon={faSun} />
+          ) : (
+            <FontAwesomeIcon icon={faMoon} />
+          )}
+        </IconWrapper>
+      </MenuButton>
       {location.pathname !== "/add" && (
         <Button variant="contained" color="primary" component={Link} to="/add">
           Add Book

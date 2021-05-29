@@ -6,7 +6,7 @@ export const AddBookForm = styled.form`
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: ${(props) => props.theme.colors.white};
+  background-color: ${(props) => props.theme.colors.bgcPrimary};
 
   margin: 0.5em !important;
   padding: 2em;
